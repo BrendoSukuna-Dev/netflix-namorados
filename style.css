@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.cabecalho {
+  background-color: #141414;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.cabecalho nav {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cabecalho nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.banner {
+  position: relative;
+  background: url(/img/background.jpg) no-repeat center center/cover;
+  padding: 120px 1rem 2rem;
+  background-size: cover;
+}
+
+.banner::after {
+  content: "";
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.589),
+    rgba(0, 0, 0, 0.671)
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.conteudo {
+  position: relative;
+  max-width: 100%;
+  color: white;
+  z-index: 2;
+}
+
+.titulo {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.7rem;
+  margin: 0;
+}
+
+.detalhes {
+  margin: 10px 0;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.descicao {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.botoes {
+  margin-top: 20px;
+}
+
+.botoes button {
+  background: #fff;
+  color: black;
+  border: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.momentos {
+  padding: 1.5rem 1rem;
+}
+
+.momentos h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .swiper-slide img {
+    width: 400px;
+  }
+}
+
+footer {
+  background-color: #141414;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+}

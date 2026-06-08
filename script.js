@@ -4,11 +4,11 @@ const carrosseis = document.querySelectorAll(".swiper");
 // Inicializa o Swiper para cada um deles separadamente
 carrosseis.forEach((carrossel) => {
   new Swiper(carrossel, {
-    loop: true,
+    loop: false, // Desativado para evitar os pulos e bugs de clonagem
     slidesPerView: 2,
     spaceBetween: 10,
-
-    // O bloco 'autoplay' foi removido daqui para parar a rolagem automática!
+    grabCursor: true, // Transforma a setinha do mouse em uma "mãozinha" de arrastar
+    resistanceRatio: 0.5, // Deixa o efeito elástico no final do carrossel mais suave
 
     breakpoints: {
       600: {

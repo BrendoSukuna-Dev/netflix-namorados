@@ -19,10 +19,13 @@ carrosseis.forEach((carrossel) => {
     slidesOffsetBefore: 20,
     slidesOffsetAfter: 100,
 
-    // ====== EVENTO DE CLIQUE DO SWIPER (Evita bloqueios de arrasto) ======
+    // ====== EVENTO DE CLIQUE DO SWIPER ======
     on: {
       click: function (swiper, event) {
-        // Verifica se o clique foi especificamente em uma imagem do slide
+        // Evita que o navegador execute cliques duplicados no celular
+        event.preventDefault();
+
+        // Verifica se o clique foi na imagem
         const imagemClicada = event.target.closest(".swiper-slide img");
 
         if (imagemClicada) {
@@ -30,10 +33,9 @@ carrosseis.forEach((carrossel) => {
           const lightboxImg = document.getElementById("lightbox-img");
 
           if (lightbox && lightboxImg) {
-            lightboxImg.src = imagemClicada.src; // Passa o caminho da foto para o lightbox
-            lightbox.style.display = "flex"; // Ativa o container
+            lightboxImg.src = imagemClicada.src;
+            lightbox.style.display = "flex";
 
-            // Pequeno delay para a animação de transição funcionar
             setTimeout(() => {
               lightbox.classList.add("ativo");
             }, 10);
@@ -51,14 +53,26 @@ function fecharFoto() {
     lightbox.classList.remove("ativo");
     setTimeout(() => {
       lightbox.style.display = "none";
-    }, 300); // Tempo batendo com o transition do CSS
+    }, 300);
   }
 }
 
-// Vincula o fechamento ao clicar no fundo ou no botão X
+// Vincula o fechamento de forma segura
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
+  const botaoFechar = document.querySelector(".lightbox-fechar");
+
   if (lightbox) {
-    lightbox.addEventListener("click", fecharFoto);
+    // No celular, fechar ao tocar no fundo ou no botão sem dar conflito
+    lightbox.addEventListener("click", (e) => {
+      // SÓ FECHA se clicar no fundo preto ou no botão X (impede fechar clicando na própria foto)
+      if (
+        e.target === lightbox ||
+        e.target === botaoFechar ||
+        e.target.classList.contains("lightbox-fechar")
+      ) {
+        fecharFoto();
+      }
+    });
   }
 });

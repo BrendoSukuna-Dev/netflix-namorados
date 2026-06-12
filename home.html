@@ -5,101 +5,383 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/logo-favicon.png" />
     <link rel="stylesheet" href="style-home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Feliz Dia Dos Namorados</title>
   </head>
   <body>
-    <!-- Parte Superior: Pôster do Filme -->
-    <div class="poster-container">
-      <!-- Substitua 'sua-imagem-aqui.jpg' pelo link real da imagem do pôster -->
-      <img
-        src="/img/Momentos/21.webp"
-        alt="Pôster Resistência"
-        class="poster-image"
-      />
-      <div class="poster-overlay"></div>
-      <div class="title-group">
-        <h1 class="main-title">Feliz Dia Dos Namorados!</h1>
-        <p class="release-date">12 de junho</p>
+    <header class="cabecalho">
+      <div class="logo">
+        <img src="/img/logo.png" alt="" width="80px" />
       </div>
-    </div>
+      <nav>
+        <a href="#momentos">Momentos</a>
+        <a href="#vegas">Vegas</a>
+        <a href="#viagem">Viagem</a>
+        <a href="#ia">IA</a>
+      </nav>
+    </header>
 
-    <!-- Parte Inferior: Escolha do Perfil -->
-    <div class="profile-picker-container">
-      <div class="prompt-text">Escolha o seu perfil</div>
+    <section class="banner">
+      <div class="conteudo">
+        <p class="titulo">Brendo & Beatriz</p>
+        <p class="detalhes">
+          <span>12 DE JUNHO, 2 ANOS, 10 MESES, 11 DIAS</span>
+          <span class="stars">
+            <i class="fa-solid fa-star" style="color: rgb(216, 8, 11)"></i>
+            <i class="fa-solid fa-star" style="color: rgb(216, 8, 11)"></i>
+            <i class="fa-solid fa-star" style="color: rgb(216, 8, 11)"></i>
+            <i class="fa-solid fa-star" style="color: rgb(216, 8, 11)"></i>
+            <i class="fa-solid fa-star" style="color: rgb(216, 8, 11)"></i>
+          </span>
+        </p>
 
-      <div class="profiles-grid">
-        <!-- Perfil 1: Gatinho -->
-        <div class="profile-item">
-          <div class="profile-avatar-container">
-            <img
-              src="/img/Perfis/perfil-andre.png"
-              alt="Andréa"
-              class="profile-avatar-img"
-            />
-          </div>
-          <div class="profile-name">Andréa</div>
-        </div>
-
-        <!-- Perfil 2: Jinx -->
-        <div
-          class="profile-item"
-          onclick="window.location.href = '/index.html'"
-        >
-          <div class="profile-avatar-container">
-            <img
-              src="/img/Perfis/perfil-sukuna.png"
-              alt="Legoshi"
-              class="profile-avatar-img"
-            />
-          </div>
-          <div class="profile-name">Sukuna</div>
-        </div>
-
-        <!-- Perfil 3: Moça -->
-        <div class="profile-item">
-          <div class="profile-avatar-container">
-            <img
-              src="/img/Perfis/perfil-aninha.png"
-              alt="Aninha"
-              class="profile-avatar-img"
-            />
-          </div>
-          <div class="profile-name">Aninha</div>
-        </div>
-
-        <!-- Perfil 4: CRISTAL -->
-        <div class="profile-item">
-          <div class="profile-avatar-container">
-            <img
-              src="/img/Perfis/perfil-cristal.png"
-              alt="CRISTAL"
-              class="profile-avatar-img"
-            />
-          </div>
-          <div class="profile-name">CRISTAL 😂</div>
-        </div>
-
-        <!-- Perfil 5: Bruno -->
-        <div class="profile-item">
-          <div class="profile-avatar-container">
-            <img
-              src="/img/Perfis/perfil-bruno.png"
-              alt="Bruno"
-              class="profile-avatar-img"
-            />
-          </div>
-          <div class="profile-name">Bruno</div>
-        </div>
-
-        <!-- Botão de Editar -->
-        <div class="profile-item">
-          <div class="edit-profile-avatar">
-            <!-- Ícone de Lápis Simples (Unicode ou Imagem) -->
-            <span class="edit-icon">&#x270E;</span>
-          </div>
-          <div class="profile-name">Editar</div>
+        <p class="descricao">
+          Nosso amor não precisa ser perfeito, porque ele é verdadeiro. A gente
+          se entende no olhar, se apoia nas dificuldades e se diverte nas coisas
+          mais simples. Já passamos por momentos bons e outros nem tanto, mas em
+          todos eles, estar ao seu lado fez tudo valer a pena. Você é meu porto
+          seguro, minha paz em dias turbulentos e minha companhia preferida em
+          qualquer situação. Com você aprendi que amor é parceria, é cuidado, é
+          crescer junto. E mesmo quando a vida tenta nos testar, nosso amor se
+          fortalece. Eu te admiro pela sua força, pela sua calma e pela forma
+          como você cuida de mim e do nosso relacionamento. Não quero prometer
+          perfeição, mas quero estar aqui, te amar cada dia mais e construir um
+          futuro cheio de memórias bonitas ao seu lado.
+        </p>
+        <p>
+          Feliz Dia dos Namorados! Te amo muitãoooooooooooooooooooooooooooo❤️.
+        </p>
+        <div class="botoes">
+          <button>
+            <i class="fa-solid fa-play" style="color: rgb(0, 0, 0)"></i
+            >Continuar
+          </button>
+          <button>
+            <i class="fa-solid fa-star" style="color: rgb(0, 0, 0)"></i>Favorito
+          </button>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="momentos">
+      <h2 id="momentos">Momentos</h2>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="/img/Momentos/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/4.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/5.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/6.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/7.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/8.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/9.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/10.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/11.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/12.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/13.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/14.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/15.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/16.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/17.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/18.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/19.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/20.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/21.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/22.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/23.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/24.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Momentos/25.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <h2 id="vegas">Vegas</h2>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="/img/Vegas/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/4.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/5.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/6.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/7.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/8.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/9.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/10.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/11.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/12.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/13.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/14.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/15.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/16.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/17.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/18.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/19.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/20.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/21.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/22.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/23.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/24.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/25.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/26.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/27.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/28.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/29.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/30.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/31.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/32.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/33.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/34.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Vegas/35.jpg" alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <h2 id="viagem">Viagem</h2>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="/img/Viagem/1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/4.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/5.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/6.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/7.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/8.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/9.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/10.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/11.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/12.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/13.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/14.png" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/15.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/16.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/17.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/18.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/19.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/20.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/21.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/22.webp" alt="" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Viagem/23.webp" alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <h2 id="ia">Geradas por IA</h2>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="/img/Geradas por IA/casal-1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Geradas por IA/casal-2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Geradas por IA/casal-3.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/Geradas por IA/casal-4.png" alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>2026 - Brendo & Beatriz - Always and forever</footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

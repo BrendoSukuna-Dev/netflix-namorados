@@ -132,3 +132,65 @@ footer {
   text-align: center;
   font-size: 0.75rem;
 }
+
+/* ==========================================================================
+   CSS COMPLETO DO LIGHTBOX (Adicione no fim do seu style-home_3.css)
+   ========================================================================== */
+
+/* O fundo preto que cobre a tela toda */
+.lightbox {
+  display: none; /* Começa escondido */
+  position: fixed;
+  z-index: 9999; /* Fica acima de absolutamente tudo */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Quando o lightbox ganha a classe 'ativo', ele aparece suavemente */
+.lightbox.ativo {
+  opacity: 1;
+}
+
+/* Configuração da foto ampliada */
+.lightbox-conteudo {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(216, 8, 11, 0.3); /* Sombra leve vermelha para combinar */
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.ativo .lightbox-conteudo {
+  transform: scale(1);
+}
+
+/* Botão de fechar (X) no topo */
+.lightbox-fechar {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.2s;
+}
+
+.lightbox-fechar:hover {
+  color: rgb(216, 8, 11); /* Muda para vermelho ao passar o mouse */
+}
+
+/* Indica visualmente no carrossel que as fotos podem ser clicadas */
+.swiper-slide img {
+  cursor: zoom-in !important;
+}

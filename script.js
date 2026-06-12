@@ -8,6 +8,7 @@ carrosseis.forEach((carrossel) => {
     slidesPerView: "auto", // IMPORTANTE: Permite que as fotos tenham tamanho fluido
     spaceBetween: 15, // Espaço entre as fotos
     grabCursor: true, // Adiciona a mãozinha de arrastar
+    watchSlidesProgress: true,
 
     // Libera o arrasto livre estilo linha do tempo (sem travar de foto em foto)
     freeMode: {
